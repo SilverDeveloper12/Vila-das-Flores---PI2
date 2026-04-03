@@ -1,0 +1,35 @@
+{
+"usuarios": [
+{ "id": 1, "nome": "João Silva", "email": "joao@email.com",
+"telefone": "(11) 98765-4321", "profissao": "Desenvolvedor" },
+{ "id": 2, "nome": "Maria Santos", "email": "maria@email.com",
+"telefone": "(21) 99876-5432", "profissao": "Designer" },
+{ "id": 3, "nome": "Pedro Oliveira", "email": "pedro@email.com",
+"telefone": "(31) 97654-3210", "profissao": "Gerente de Projetos" }
+],
+"produtos": [
+{ "id": 1, "nome": "Notebook", "preco": 3500, "estoque": 15, "categoria": "Eletrônicos" },
+{ "id": 2, "nome": "Mouse", "preco": 50, "estoque": 100, "categoria": "Eletrônicos" },
+{ "id": 3, "nome": "Teclado", "preco": 150, "estoque": 50, "categoria": "Eletrônicos" }
+],
+
+"posts": [
+{
+"id": 1,
+"titulo": "Introdução ao Angular",
+"conteudo": "Angular é um framework poderoso...",
+"autor": "João Silva",
+"data": "2026-03-01"
+},
+{
+"id": 2,
+"titulo": "JSON Server na prática",
+"conteudo": "JSON Server facilita o desenvolvimento...",
+"autor": "Maria Santos",
+"data": "2026-03-10"}
+]
+
+}
+
+
+
