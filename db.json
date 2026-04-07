@@ -316,6 +316,15 @@
       "categoria": "Buquês",
       "imagem": "assets/images/camelias.jpg",
       "descricao": "Camélias delicadas e sofisticadas."
+    },
+    {
+      "nome": "Teste",
+      "preco": 1,
+      "estoque": 1,
+      "categoria": "Buquês",
+      "imagem": "",
+      "descricao": "teste",
+      "id": "vHy9ZAnv300"
     }
   ],
   "carrinho": [

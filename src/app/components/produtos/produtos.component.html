@@ -1,6 +1,6 @@
 <h2>Adicionar Produto</h2>
 
-<form (ngSubmit)="adicionarProduto()">
+<form (ngSubmit)="salvarProduto()">
   <input type="text" [(ngModel)]="novoProduto.nome" name="nome" placeholder="Nome" required>
 
   <input type="number" [(ngModel)]="novoProduto.preco" name="preco" placeholder="Preço" required>
@@ -13,7 +13,9 @@
 
   <input type="text" [(ngModel)]="novoProduto.descricao" name="descricao" placeholder="Descrição">
 
-  <button type="submit">Adicionar</button>
+  <button type="submit">
+  {{ editando ? 'Salvar Alterações' : 'Adicionar' }}
+</button>
 </form>
 
 <hr>
@@ -32,6 +34,9 @@
     <p><strong>Descrição:</strong> {{ produto.descricao }}</p>
     <p><strong>Preço:</strong> R$ {{ produto.preco }}</p>
     <p><strong>Estoque:</strong> {{ produto.estoque }}</p>
+
+    <button (click)="editarProduto(produto)">Editar</button>
+    <button (click)="removerProduto(produto.id!)">Excluir</button>
 
     <hr />
   </div>

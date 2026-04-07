@@ -30,4 +30,10 @@ return this.http.get<Produto[]>(`${this.apiUrl}/produtos`);
 addProduto(produto: Produto) {
   return this.http.post<Produto>(`${this.apiUrl}/produtos`, produto);
 }
+deleteProduto(id: string) {
+  return this.http.delete(`${this.apiUrl}/produtos/${id}`);
+}
+updateProduto(id: string, produto: Produto) {
+  return this.http.put<Produto>(`${this.apiUrl}/produtos/${id}`, produto);
+}
 }

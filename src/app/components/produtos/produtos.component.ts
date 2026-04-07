@@ -13,7 +13,7 @@ import { Produto } from '../../models/models';
 })
 export class ProdutosComponent implements OnInit {
   produtos: Produto[] = [];
-
+  
   novoProduto: Produto = {
     nome: '',
     preco: 0,
@@ -22,6 +22,9 @@ export class ProdutosComponent implements OnInit {
     imagem: '',
     descricao: ''
   };
+
+  editando = false;
+  produtoEditandoId: string | null = null;
 
   constructor(private api: ApiService) {}
 
@@ -61,4 +64,61 @@ export class ProdutosComponent implements OnInit {
       }
     });
   }
+  removerProduto(id: string): void {
+  this.api.deleteProduto(id).subscribe({
+    next: () => {
+      this.produtos = this.produtos.filter(produto => produto.id !== id);
+      console.log('Produto removido com sucesso');
+    },
+    error: (erro) => {
+      console.error('Erro ao remover produto:', erro);
+    }
+  });
+  }
+  editarProduto(produto: Produto): void {
+    this.novoProduto = { ...produto };
+    this.editando = true;
+    this.produtoEditandoId = produto.id!;
+  }
+  salvarProduto(): void {
+  if (this.editando && this.produtoEditandoId) {
+    this.api.updateProduto(this.produtoEditandoId, this.novoProduto).subscribe({
+      next: (produtoAtualizado) => {
+        this.produtos = this.produtos.map(produto =>
+          produto.id === this.produtoEditandoId ? produtoAtualizado : produto
+        );
+
+        console.log('Produto atualizado:', produtoAtualizado);
+        this.resetarFormulario();
+      },
+      error: (erro) => {
+        console.error('Erro ao atualizar produto:', erro);
+      }
+    });
+  } else {
+    this.api.addProduto(this.novoProduto).subscribe({
+      next: (produtoAdicionado) => {
+        this.produtos.push(produtoAdicionado);
+        console.log('Produto adicionado:', produtoAdicionado);
+        this.resetarFormulario();
+      },
+      error: (erro) => {
+        console.error('Erro ao adicionar produto:', erro);
+      }
+    });
+  }
+}
+resetarFormulario(): void {
+  this.novoProduto = {
+    nome: '',
+    preco: 0,
+    estoque: 0,
+    categoria: '',
+    imagem: '',
+    descricao: ''
+  };
+
+  this.editando = false;
+  this.produtoEditandoId = null;
+}
 }
