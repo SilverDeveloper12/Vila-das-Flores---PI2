@@ -1,35 +1,554 @@
 {
-"usuarios": [
-{ "id": 1, "nome": "João Silva", "email": "joao@email.com",
-"telefone": "(11) 98765-4321", "profissao": "Desenvolvedor" },
-{ "id": 2, "nome": "Maria Santos", "email": "maria@email.com",
-"telefone": "(21) 99876-5432", "profissao": "Designer" },
-{ "id": 3, "nome": "Pedro Oliveira", "email": "pedro@email.com",
-"telefone": "(31) 97654-3210", "profissao": "Gerente de Projetos" }
-],
-"produtos": [
-{ "id": 1, "nome": "Notebook", "preco": 3500, "estoque": 15, "categoria": "Eletrônicos" },
-{ "id": 2, "nome": "Mouse", "preco": 50, "estoque": 100, "categoria": "Eletrônicos" },
-{ "id": 3, "nome": "Teclado", "preco": 150, "estoque": 50, "categoria": "Eletrônicos" }
-],
-
-"posts": [
-{
-"id": 1,
-"titulo": "Introdução ao Angular",
-"conteudo": "Angular é um framework poderoso...",
-"autor": "João Silva",
-"data": "2026-03-01"
-},
-{
-"id": 2,
-"titulo": "JSON Server na prática",
-"conteudo": "JSON Server facilita o desenvolvimento...",
-"autor": "Maria Santos",
-"data": "2026-03-10"}
-]
-
+  "usuarios": [
+    {
+      "id": "1",
+      "nome": "Davi Silva",
+      "login": "davi.silva",
+      "senha": "123456",
+      "telefone": "11987654321",
+      "email": "davi.silva@email.com",
+      "endereco": "Rua das Flores, 123 - São Paulo"
+    },
+    {
+      "id": "2",
+      "nome": "Ana Souza",
+      "login": "ana.souza",
+      "senha": "123456",
+      "telefone": "11976543210",
+      "email": "ana.souza@email.com",
+      "endereco": "Av. Paulista, 456 - São Paulo"
+    },
+    {
+      "id": "3",
+      "nome": "Carlos Mendes",
+      "login": "carlos.mendes",
+      "senha": "123456",
+      "telefone": "11965432109",
+      "email": "carlos@email.com",
+      "endereco": "Rua Verde, 78 - Campinas"
+    },
+    {
+      "id": "4",
+      "nome": "Fernanda Lima",
+      "login": "fernanda.lima",
+      "senha": "123456",
+      "telefone": "11954321098",
+      "email": "fernanda@email.com",
+      "endereco": "Rua Central, 90 - Santos"
+    },
+    {
+      "id": "5",
+      "nome": "Lucas Pereira",
+      "login": "lucas.pereira",
+      "senha": "123456",
+      "telefone": "11943210987",
+      "email": "lucas@email.com",
+      "endereco": "Rua Azul, 321 - São Paulo"
+    },
+    {
+      "id": "6",
+      "nome": "Juliana Costa",
+      "login": "juliana.costa",
+      "senha": "123456",
+      "telefone": "11932109876",
+      "email": "juliana@email.com",
+      "endereco": "Av. Brasil, 654 - Rio de Janeiro"
+    },
+    {
+      "id": "7",
+      "nome": "Rafael Alves",
+      "login": "rafael.alves",
+      "senha": "123456",
+      "telefone": "11921098765",
+      "email": "rafael@email.com",
+      "endereco": "Rua do Sol, 12 - Belo Horizonte"
+    },
+    {
+      "id": "8",
+      "nome": "Patricia Gomes",
+      "login": "patricia.gomes",
+      "senha": "123456",
+      "telefone": "11910987654",
+      "email": "patricia@email.com",
+      "endereco": "Rua das Palmeiras, 88 - Curitiba"
+    },
+    {
+      "id": "9",
+      "nome": "Bruno Martins",
+      "login": "bruno.martins",
+      "senha": "123456",
+      "telefone": "11899887766",
+      "email": "bruno@email.com",
+      "endereco": "Av. Atlântica, 200 - Rio de Janeiro"
+    },
+    {
+      "id": "10",
+      "nome": "Camila Rocha",
+      "login": "camila.rocha",
+      "senha": "123456",
+      "telefone": "11888776655",
+      "email": "camila@email.com",
+      "endereco": "Rua Nova, 45 - São Paulo"
+    },
+    {
+      "id": "11",
+      "nome": "Eduardo Freitas",
+      "login": "eduardo.freitas",
+      "senha": "123456",
+      "telefone": "11877665544",
+      "email": "eduardo@email.com",
+      "endereco": "Rua do Comércio, 67 - Salvador"
+    },
+    {
+      "id": "12",
+      "nome": "Larissa Teixeira",
+      "login": "larissa.teixeira",
+      "senha": "123456",
+      "telefone": "11866554433",
+      "email": "larissa@email.com",
+      "endereco": "Av. Independência, 300 - Porto Alegre"
+    },
+    {
+      "id": "13",
+      "nome": "Gustavo Ribeiro",
+      "login": "gustavo.ribeiro",
+      "senha": "123456",
+      "telefone": "11855443322",
+      "email": "gustavo@email.com",
+      "endereco": "Rua das Acácias, 15 - Recife"
+    },
+    {
+      "id": "14",
+      "nome": "Mariana Barros",
+      "login": "mariana.barros",
+      "senha": "123456",
+      "telefone": "11844332211",
+      "email": "mariana@email.com",
+      "endereco": "Rua Bela Vista, 101 - Fortaleza"
+    },
+    {
+      "id": "15",
+      "nome": "Felipe Cardoso",
+      "login": "felipe.cardoso",
+      "senha": "123456",
+      "telefone": "11833221100",
+      "email": "felipe@email.com",
+      "endereco": "Rua Horizonte, 77 - São Paulo"
+    }
+  ],
+  "produtos": [
+    {
+      "id": "1",
+      "nome": "Buquê de Rosas Vermelhas",
+      "preco": 199.9,
+      "estoque": 15,
+      "categoria": "Buquês",
+      "imagem": "https://png.pngtree.com/png-clipart/20250502/original/pngtree-bouquet-of-red-roses-png-image_20934071.png",
+      "descricao": "Clássico buquê com rosas vermelhas intensas."
+    },
+    {
+      "id": "2",
+      "nome": "Buquê de Rosas Brancas",
+      "preco": 100,
+      "estoque": 12,
+      "categoria": "Buquês",
+      "imagem": "https://png.pngtree.com/png-clipart/20250515/original/pngtree-elegant-white-rose-bouquet-with-baby-s-breath-and-ribbon-png-image_20988691.png",
+      "descricao": "Elegante e delicado, ideal para ocasiões especiais."
+    },
+    {
+      "id": "3",
+      "nome": "Buquê de Girassóis",
+      "preco": 95,
+      "estoque": 10,
+      "categoria": "Buquês",
+      "imagem": "https://png.pngtree.com/png-clipart/20231005/original/pngtree-sunflower-bouquet-png-image_13279140.png",
+      "descricao": "Buquê vibrante que transmite alegria."
+    },
+    {
+      "id": "4",
+      "nome": "Buquê de Lírios",
+      "preco": 110,
+      "estoque": 8,
+      "categoria": "Buquês",
+      "imagem": "https://png.pngtree.com/png-clipart/20250129/original/pngtree-graceful-lily-bouquet-with-pink-and-white-blooms-png-image_20083758.png",
+      "descricao": "Lírios sofisticados com aroma suave."
+    },
+    {
+      "id": "5",
+      "nome": "Buquê de Tulipas Coloridas",
+      "preco": 130,
+      "estoque": 9,
+      "categoria": "Buquês",
+      "imagem": "assets/images/tulipas.jpg",
+      "descricao": "Mistura vibrante de tulipas coloridas."
+    },
+    {
+      "id": "6",
+      "nome": "Buquê de Orquídeas",
+      "preco": 150,
+      "estoque": 6,
+      "categoria": "Buquês",
+      "imagem": "assets/images/orquideas.jpg",
+      "descricao": "Elegância exótica com orquídeas selecionadas."
+    },
+    {
+      "id": "7",
+      "nome": "Arranjo de Margaridas",
+      "preco": 70,
+      "estoque": 20,
+      "categoria": "Arranjos",
+      "imagem": "assets/images/margaridas.jpg",
+      "descricao": "Arranjo leve e alegre com margaridas."
+    },
+    {
+      "id": "8",
+      "nome": "Arranjo de Lavandas",
+      "preco": 85,
+      "estoque": 14,
+      "categoria": "Arranjos",
+      "imagem": "assets/images/lavanda.jpg",
+      "descricao": "Lavandas com aroma relaxante."
+    },
+    {
+      "id": "9",
+      "nome": "Arranjo de Cravos",
+      "preco": 75,
+      "estoque": 18,
+      "categoria": "Arranjos",
+      "imagem": "assets/images/cravos.jpg",
+      "descricao": "Cravos coloridos e resistentes."
+    },
+    {
+      "id": "10",
+      "nome": "Arranjo de Hortênsias",
+      "preco": 95,
+      "estoque": 11,
+      "categoria": "Arranjos",
+      "imagem": "assets/images/hortensias.jpg",
+      "descricao": "Hortênsias volumosas e elegantes."
+    },
+    {
+      "id": "11",
+      "nome": "Rosa Vermelha Unitária",
+      "preco": 15,
+      "estoque": 50,
+      "categoria": "Flores",
+      "imagem": "assets/images/rosa-unitaria.jpg",
+      "descricao": "Rosa vermelha única, símbolo do amor."
+    },
+    {
+      "id": "12",
+      "nome": "Tulipa Unitária",
+      "preco": 18,
+      "estoque": 40,
+      "categoria": "Flores",
+      "imagem": "assets/images/tulipa-unitaria.jpg",
+      "descricao": "Tulipa delicada e elegante."
+    },
+    {
+      "id": "13",
+      "nome": "Girassol Unitário",
+      "preco": 20,
+      "estoque": 35,
+      "categoria": "Flores",
+      "imagem": "assets/images/girassol-unitario.jpg",
+      "descricao": "Flor radiante que simboliza felicidade."
+    },
+    {
+      "id": "14",
+      "nome": "Lírio Unitário",
+      "preco": 22,
+      "estoque": 30,
+      "categoria": "Flores",
+      "imagem": "assets/images/lirio-unitario.jpg",
+      "descricao": "Lírio elegante com perfume suave."
+    },
+    {
+      "id": "15",
+      "nome": "Orquídea Unitária",
+      "preco": 35,
+      "estoque": 20,
+      "categoria": "Flores",
+      "imagem": "assets/images/orquidea-unitaria.jpg",
+      "descricao": "Flor exótica e sofisticada."
+    },
+    {
+      "id": "16",
+      "nome": "Buquê Premium Mix",
+      "preco": 180,
+      "estoque": 5,
+      "categoria": "Buquês",
+      "imagem": "assets/images/mix.jpg",
+      "descricao": "Combinação premium de várias flores."
+    },
+    {
+      "id": "17",
+      "nome": "Arranjo Romântico",
+      "preco": 140,
+      "estoque": 7,
+      "categoria": "Arranjos",
+      "imagem": "assets/images/romantico.jpg",
+      "descricao": "Arranjo ideal para momentos especiais."
+    },
+    {
+      "id": "18",
+      "nome": "Buquê de Peônias",
+      "preco": 160,
+      "estoque": 6,
+      "categoria": "Buquês",
+      "imagem": "assets/images/peonias.jpg",
+      "descricao": "Peônias volumosas e elegantes."
+    },
+    {
+      "id": "19",
+      "nome": "Arranjo Tropical",
+      "preco": 130,
+      "estoque": 9,
+      "categoria": "Arranjos",
+      "imagem": "assets/images/tropical.jpg",
+      "descricao": "Mistura vibrante de flores tropicais."
+    },
+    {
+      "id": "20",
+      "nome": "Buquê de Camélias",
+      "preco": 125,
+      "estoque": 8,
+      "categoria": "Buquês",
+      "imagem": "assets/images/camelias.jpg",
+      "descricao": "Camélias delicadas e sofisticadas."
+    }
+  ],
+  "carrinho": [
+    {
+      "id": "1",
+      "usuarioId": "1",
+      "produtoId": "1",
+      "quantidade": 2
+    },
+    {
+      "id": "2",
+      "usuarioId": "1",
+      "produtoId": "3",
+      "quantidade": 1
+    },
+    {
+      "id": "3",
+      "usuarioId": "2",
+      "produtoId": "5",
+      "quantidade": 1
+    },
+    {
+      "id": "4",
+      "usuarioId": "3",
+      "produtoId": "7",
+      "quantidade": 3
+    },
+    {
+      "id": "5",
+      "usuarioId": "4",
+      "produtoId": "2",
+      "quantidade": 2
+    },
+    {
+      "id": "6",
+      "usuarioId": "5",
+      "produtoId": "10",
+      "quantidade": 1
+    },
+    {
+      "id": "7",
+      "usuarioId": "6",
+      "produtoId": "14",
+      "quantidade": 4
+    },
+    {
+      "id": "8",
+      "usuarioId": "7",
+      "produtoId": "8",
+      "quantidade": 2
+    },
+    {
+      "id": "9",
+      "usuarioId": "8",
+      "produtoId": "6",
+      "quantidade": 1
+    },
+    {
+      "id": "10",
+      "usuarioId": "9",
+      "produtoId": "12",
+      "quantidade": 5
+    },
+    {
+      "id": "11",
+      "usuarioId": "10",
+      "produtoId": "4",
+      "quantidade": 1
+    },
+    {
+      "id": "12",
+      "usuarioId": "11",
+      "produtoId": "9",
+      "quantidade": 2
+    }
+  ],
+  "pedidos": [
+    {
+      "id": "1",
+      "usuarioId": "1",
+      "data": "2026-04-01",
+      "status": "entregue",
+      "total": 335
+    },
+    {
+      "id": "2",
+      "usuarioId": "2",
+      "data": "2026-04-02",
+      "status": "em preparo",
+      "total": 130
+    },
+    {
+      "id": "3",
+      "usuarioId": "3",
+      "data": "2026-04-02",
+      "status": "enviado",
+      "total": 210
+    },
+    {
+      "id": "4",
+      "usuarioId": "4",
+      "data": "2026-04-03",
+      "status": "pendente",
+      "total": 200
+    },
+    {
+      "id": "5",
+      "usuarioId": "5",
+      "data": "2026-04-03",
+      "status": "entregue",
+      "total": 95
+    },
+    {
+      "id": "6",
+      "usuarioId": "6",
+      "data": "2026-04-04",
+      "status": "cancelado",
+      "total": 88
+    },
+    {
+      "id": "7",
+      "usuarioId": "7",
+      "data": "2026-04-04",
+      "status": "entregue",
+      "total": 170
+    },
+    {
+      "id": "8",
+      "usuarioId": "8",
+      "data": "2026-04-05",
+      "status": "em preparo",
+      "total": 150
+    },
+    {
+      "id": "9",
+      "usuarioId": "9",
+      "data": "2026-04-05",
+      "status": "enviado",
+      "total": 90
+    },
+    {
+      "id": "10",
+      "usuarioId": "10",
+      "data": "2026-04-06",
+      "status": "pendente",
+      "total": 220
+    }
+  ],
+  "itensPedido": [
+    {
+      "id": "1",
+      "pedidoId": "1",
+      "produtoId": "1",
+      "quantidade": 2,
+      "precoUnitario": 120
+    },
+    {
+      "id": "2",
+      "pedidoId": "1",
+      "produtoId": "11",
+      "quantidade": 1,
+      "precoUnitario": 15
+    },
+    {
+      "id": "3",
+      "pedidoId": "1",
+      "produtoId": "13",
+      "quantidade": 4,
+      "precoUnitario": 20
+    },
+    {
+      "id": "4",
+      "pedidoId": "2",
+      "produtoId": "5",
+      "quantidade": 1,
+      "precoUnitario": 130
+    },
+    {
+      "id": "5",
+      "pedidoId": "3",
+      "produtoId": "7",
+      "quantidade": 3,
+      "precoUnitario": 70
+    },
+    {
+      "id": "6",
+      "pedidoId": "4",
+      "produtoId": "2",
+      "quantidade": 2,
+      "precoUnitario": 100
+    },
+    {
+      "id": "7",
+      "pedidoId": "5",
+      "produtoId": "10",
+      "quantidade": 1,
+      "precoUnitario": 95
+    },
+    {
+      "id": "8",
+      "pedidoId": "6",
+      "produtoId": "14",
+      "quantidade": 4,
+      "precoUnitario": 22
+    },
+    {
+      "id": "9",
+      "pedidoId": "7",
+      "produtoId": "8",
+      "quantidade": 2,
+      "precoUnitario": 85
+    },
+    {
+      "id": "10",
+      "pedidoId": "8",
+      "produtoId": "6",
+      "quantidade": 1,
+      "precoUnitario": 150
+    },
+    {
+      "id": "11",
+      "pedidoId": "9",
+      "produtoId": "12",
+      "quantidade": 5,
+      "precoUnitario": 18
+    },
+    {
+      "id": "12",
+      "pedidoId": "10",
+      "produtoId": "4",
+      "quantidade": 2,
+      "precoUnitario": 110
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
-
-
-
