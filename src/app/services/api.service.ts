@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Usuario, Produto, Post } from '../models/models';
+import { Usuario, Produto, Carrinho, Pedido, ItemPedido } from '../models/models';
 
 @Injectable({ providedIn: 'root' })
 export class ApiService {
@@ -27,11 +27,7 @@ return this.http.delete<void>(`${this.apiUrl}/usuarios/${id}`);
 getProdutos(): Observable<Produto[]> {
 return this.http.get<Produto[]>(`${this.apiUrl}/produtos`);
 }
-// Métodos para Posts
-getPosts(): Observable<Post[]> {
-return this.http.get<Post[]>(`${this.apiUrl}/posts`);
+addProduto(produto: Produto) {
+  return this.http.post<Produto>(`${this.apiUrl}/produtos`, produto);
 }
 }
-
-
-

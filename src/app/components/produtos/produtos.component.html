@@ -1,1 +1,42 @@
-<p>Produtos funcionando ✅</p>
+<h2>Adicionar Produto</h2>
+
+<form (ngSubmit)="adicionarProduto()">
+  <input type="text" [(ngModel)]="novoProduto.nome" name="nome" placeholder="Nome" required>
+
+  <input type="number" [(ngModel)]="novoProduto.preco" name="preco" placeholder="Preço" required>
+
+  <input type="number" [(ngModel)]="novoProduto.estoque" name="estoque" placeholder="Estoque" required>
+
+  <input type="text" [(ngModel)]="novoProduto.categoria" name="categoria" placeholder="Categoria" required>
+
+  <input type="text" [(ngModel)]="novoProduto.imagem" name="imagem" placeholder="URL da imagem">
+
+  <input type="text" [(ngModel)]="novoProduto.descricao" name="descricao" placeholder="Descrição">
+
+  <button type="submit">Adicionar</button>
+</form>
+
+<hr>
+
+<div *ngIf="produtos.length > 0; else semProdutos">
+  <div *ngFor="let produto of produtos" class="produto-card">
+    <h3>{{ produto.nome }}</h3>
+
+    <img
+      [src]="produto.imagem"
+      [alt]="produto.nome"
+      width="150"
+    />
+
+    <p><strong>Categoria:</strong> {{ produto.categoria }}</p>
+    <p><strong>Descrição:</strong> {{ produto.descricao }}</p>
+    <p><strong>Preço:</strong> R$ {{ produto.preco }}</p>
+    <p><strong>Estoque:</strong> {{ produto.estoque }}</p>
+
+    <hr />
+  </div>
+</div>
+
+<ng-template #semProdutos>
+  <p>Nenhum produto encontrado.</p>
+</ng-template>

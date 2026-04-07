@@ -20,9 +20,11 @@ export class UsuariosComponent implements OnInit {
 
   newUsuario: Usuario = {
     nome: '',
-    email: '',
+    login: '',
+    senha: '',
     telefone: '',
-    profissao: ''
+    email: '',
+    endereco: '',
   };
 
   constructor(private apiService: ApiService) { }
@@ -49,30 +51,33 @@ export class UsuariosComponent implements OnInit {
   }
 
   onSubmit(): void {
-    if (
-      !this.newUsuario.nome ||
-      !this.newUsuario.email ||
-      !this.newUsuario.telefone ||
-      !this.newUsuario.profissao
-    ) {
-      return;
-    }
-
-    this.apiService.createUsuario(this.newUsuario).subscribe({
-      next: () => {
-        this.successMessage = 'Usuário criado com sucesso!';
-        this.newUsuario = {
-          nome: '',
-          email: '',
-          telefone: '',
-          profissao: ''
-        };
-        this.loadUsuarios();
-      },
-      error: (err) => {
-        console.error('Erro ao criar usuário:', err);
-      }
-    });
+  if (
+    !this.newUsuario.nome ||
+    !this.newUsuario.login ||
+    !this.newUsuario.senha ||
+    !this.newUsuario.telefone ||
+    !this.newUsuario.email ||
+    !this.newUsuario.endereco
+  ) {
+    return;
   }
 
+  this.apiService.createUsuario(this.newUsuario).subscribe({
+    next: () => {
+      this.successMessage = 'Usuário criado com sucesso!';
+      this.newUsuario = {
+        nome: '',
+        login: '',
+        senha: '',
+        telefone: '',
+        email: '',
+        endereco: ''
+      };
+      this.loadUsuarios();
+    },
+    error: (err) => {
+      console.error('Erro ao criar usuário:', err);
+    }
+  });
+}
 }
