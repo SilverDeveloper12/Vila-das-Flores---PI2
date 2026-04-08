@@ -2,3 +2,50 @@ p {
   color: blue;
   font-size: 20px;
 }
+.btn {
+  font-family: 'Montserrat', sans-serif;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.btn-principal {
+  background-color: #dfdfdf;
+  color: rgb(0, 0, 0);
+}
+
+.btn-principal:hover {
+  background-color: #c2185b;
+}
+
+.btn-editar {
+  background-color: #dfdfdf;
+  color: black;
+}
+
+.btn-excluir {
+  background-color: #dc3545;
+  color: white;
+}
+.btn-principal {
+  background-color: #e91e63;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-principal:hover {
+  background-color: #c2185b;
+}
+.info-produto {
+  font-family: 'Montserrat', sans-serif;
+  color: #000;
+  margin: 4px 0;
+  font-size: 14px;
+}

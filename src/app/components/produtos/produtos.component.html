@@ -13,9 +13,9 @@
 
   <input type="text" [(ngModel)]="novoProduto.descricao" name="descricao" placeholder="Descrição">
 
-  <button type="submit">
+  <button type="submit" class="btn-principal">
   {{ editando ? 'Salvar Alterações' : 'Adicionar' }}
-</button>
+  </button>
 </form>
 
 <hr>
@@ -30,14 +30,18 @@
       width="150"
     />
 
-    <p><strong>Categoria:</strong> {{ produto.categoria }}</p>
-    <p><strong>Descrição:</strong> {{ produto.descricao }}</p>
-    <p><strong>Preço:</strong> R$ {{ produto.preco }}</p>
-    <p><strong>Estoque:</strong> {{ produto.estoque }}</p>
+<p class="info-produto"><strong>Categoria:</strong> {{ produto.categoria }}</p>
+<p class="info-produto"><strong>Descrição:</strong> {{ produto.descricao }}</p>
+<p class="info-produto"><strong>Preço:</strong> R$ {{ produto.preco }}</p>
+<p class="info-produto"><strong>Estoque:</strong> {{ produto.estoque }}</p>
 
-    <button (click)="editarProduto(produto)">Editar</button>
-    <button (click)="removerProduto(produto.id!)">Excluir</button>
+    <button class="btn btn-editar" (click)="editarProduto(produto)">
+  Editar
+</button>
 
+<button class="btn btn-excluir" (click)="removerProduto(produto.id!)">
+  Excluir
+</button>
     <hr />
   </div>
 </div>
