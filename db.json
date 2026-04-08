@@ -1,5 +1,5 @@
 {
-  "usuario": [
+  "usuarios": [
     {
       "id": "1",
       "nome": "Davi Silva",
@@ -179,7 +179,7 @@
       "preco": 130,
       "estoque": 9,
       "categoria": "Buquês",
-      "imagem": "assets/images/tulipas.jpg",
+      "imagem": "https://www.chefpanda.pt/wp-content/uploads/2025/02/Bouquet-de-tulipas-coloridas.jpg",
       "descricao": "Mistura vibrante de tulipas coloridas."
     },
     {
@@ -188,7 +188,7 @@
       "preco": 150,
       "estoque": 6,
       "categoria": "Buquês",
-      "imagem": "assets/images/orquideas.jpg",
+      "imagem": "https://www.dflores.com.br/_next/image?url=https%3A%2F%2Ffiles.eflorista.com.br%2Fuploads%2Fccc95a4a-5360-4ae9-8232-831f39c53f61%2F733f6f84b83644bc4a48.jpg&w=3840&q=75",
       "descricao": "Elegância exótica com orquídeas selecionadas."
     },
     {
@@ -197,7 +197,7 @@
       "preco": 70,
       "estoque": 20,
       "categoria": "Arranjos",
-      "imagem": "assets/images/margaridas.jpg",
+      "imagem": "https://static.giulianaflores.com.br/images/product/25701gg.jpg?ims=750x750",
       "descricao": "Arranjo leve e alegre com margaridas."
     },
     {
@@ -206,7 +206,7 @@
       "preco": 85,
       "estoque": 14,
       "categoria": "Arranjos",
-      "imagem": "assets/images/lavanda.jpg",
+      "imagem": "https://png.pngtree.com/png-vector/20240301/ourmid/pngtree-bouquet-of-lavender-png-image_11885039.png",
       "descricao": "Lavandas com aroma relaxante."
     },
     {
@@ -215,7 +215,7 @@
       "preco": 75,
       "estoque": 18,
       "categoria": "Arranjos",
-      "imagem": "assets/images/cravos.jpg",
+      "imagem": "https://png.pngtree.com/png-clipart/20250206/original/pngtree-vibrant-red-carnation-bouquet-perfect-for-floral-projects-and-decor-png-image_20330622.png",
       "descricao": "Cravos coloridos e resistentes."
     },
     {
@@ -224,7 +224,7 @@
       "preco": 95,
       "estoque": 11,
       "categoria": "Arranjos",
-      "imagem": "assets/images/hortensias.jpg",
+      "imagem": "https://png.pngtree.com/png-vector/20260112/ourlarge/pngtree-big-lush-blue-hydrangea-three-pieces-in-transparent-vase-on-dark-png-image_18489447.webp",
       "descricao": "Hortênsias volumosas e elegantes."
     },
     {
@@ -233,7 +233,7 @@
       "preco": 15,
       "estoque": 50,
       "categoria": "Flores",
-      "imagem": "assets/images/rosa-unitaria.jpg",
+      "imagem": "https://cdn.awsli.com.br/600x450/601/601454/produto/43538848/c4831e6f58.jpg",
       "descricao": "Rosa vermelha única, símbolo do amor."
     },
     {
@@ -242,7 +242,7 @@
       "preco": 18,
       "estoque": 40,
       "categoria": "Flores",
-      "imagem": "assets/images/tulipa-unitaria.jpg",
+      "imagem": "https://thumbs.dreamstime.com/b/%C3%BAnica-tulipa-bonita-isolada-no-fundo-branco-29812508.jpg",
       "descricao": "Tulipa delicada e elegante."
     },
     {
@@ -251,7 +251,7 @@
       "preco": 20,
       "estoque": 35,
       "categoria": "Flores",
-      "imagem": "assets/images/girassol-unitario.jpg",
+      "imagem": "https://floriculturaciadasflores.com.br/wp-content/uploads/2021/11/GIRASSOL-UNITARIO.jpg",
       "descricao": "Flor radiante que simboliza felicidade."
     },
     {
@@ -260,7 +260,7 @@
       "preco": 22,
       "estoque": 30,
       "categoria": "Flores",
-      "imagem": "assets/images/lirio-unitario.jpg",
+      "imagem": "https://cdn.awsli.com.br/300x300/761/761999/produto/392967619/1062209-i304bnbmwd.jpg",
       "descricao": "Lírio elegante com perfume suave."
     },
     {
@@ -269,7 +269,7 @@
       "preco": 35,
       "estoque": 20,
       "categoria": "Flores",
-      "imagem": "assets/images/orquidea-unitaria.jpg",
+      "imagem": "https://www.bazarrodrigues.com.br/wp-content/uploads/2025/06/PRODUTOS-2025-06-21T181642.698.jpg",
       "descricao": "Flor exótica e sofisticada."
     },
     {
@@ -278,7 +278,7 @@
       "preco": 180,
       "estoque": 5,
       "categoria": "Buquês",
-      "imagem": "assets/images/mix.jpg",
+      "imagem": "https://cdn.awsli.com.br/2500x2500/399/399569/produto/167772872/3-wygjar6znd.png",
       "descricao": "Combinação premium de várias flores."
     },
     {
@@ -287,44 +287,35 @@
       "preco": 140,
       "estoque": 7,
       "categoria": "Arranjos",
-      "imagem": "assets/images/romantico.jpg",
+      "imagem": "https://floricultura4r.com.br/wp-content/uploads/2024/06/dia-dos-namorados-buque-12-rosas-balao-coracao.jpeg.webp",
       "descricao": "Arranjo ideal para momentos especiais."
     },
     {
       "id": "18",
-      "nome": "Buquê de Peônias",
+      "nome": "Buquê de Peônias com Flor do Campo",
       "preco": 160,
       "estoque": 6,
       "categoria": "Buquês",
-      "imagem": "assets/images/peonias.jpg",
+      "imagem": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXufo7n9hcDNT6FEIWT_NfHwJa7yUzQtR13Q&s",
       "descricao": "Peônias volumosas e elegantes."
     },
     {
       "id": "19",
-      "nome": "Arranjo Tropical",
-      "preco": 130,
-      "estoque": 9,
-      "categoria": "Arranjos",
-      "imagem": "assets/images/tropical.jpg",
-      "descricao": "Mistura vibrante de flores tropicais."
-    },
-    {
-      "id": "20",
       "nome": "Buquê de Camélias",
       "preco": 125,
       "estoque": 8,
       "categoria": "Buquês",
-      "imagem": "assets/images/camelias.jpg",
+      "imagem": "https://images.tcdn.com.br/img/img_prod/1368629/buque_de_camelia_81_1_4d49c6e3c2bdcfcc91dddbada49e2d29.jpg",
       "descricao": "Camélias delicadas e sofisticadas."
     },
     {
-      "nome": "Teste",
-      "preco": 1,
-      "estoque": 1,
-      "categoria": "Buquês",
+      "nome": "",
+      "preco": 0,
+      "estoque": 0,
+      "categoria": "",
       "imagem": "",
-      "descricao": "teste",
-      "id": "vHy9ZAnv300"
+      "descricao": "",
+      "id": "FlO7Qm9lN94"
     }
   ],
   "carrinho": [
