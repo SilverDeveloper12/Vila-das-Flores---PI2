@@ -1,0 +1,23 @@
+<div class="container">
+  <h2>Login</h2>
+
+  <input
+    type="email"
+    placeholder="Email"
+    [(ngModel)]="email"
+  >
+
+  <input
+    type="password"
+    placeholder="Senha"
+    [(ngModel)]="senha"
+  >
+
+  <button (click)="entrar()">Entrar</button>
+
+  <button (click)="irParaCadastroCliente()">Cadastrar como cliente</button>
+
+  <button (click)="irParaCadastroLojista()">Cadastrar como lojista</button>
+
+  <p *ngIf="mensagemErro">{{ mensagemErro }}</p>
+</div>

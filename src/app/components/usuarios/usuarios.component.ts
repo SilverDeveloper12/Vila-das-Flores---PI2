@@ -18,14 +18,14 @@ export class UsuariosComponent implements OnInit {
   error: string | null = null;
   successMessage: string | null = null;
 
-  newUsuario: Usuario = {
-    nome: '',
-    login: '',
-    senha: '',
-    telefone: '',
-    email: '',
-    endereco: '',
-  };
+newUsuario: Usuario = {
+  tipo: 'cliente',
+  nome: '',
+  senha: '',
+  telefone: '',
+  email: '',
+  endereco: '',
+};
 
   constructor(private apiService: ApiService) { }
 
@@ -53,7 +53,6 @@ export class UsuariosComponent implements OnInit {
   onSubmit(): void {
   if (
     !this.newUsuario.nome ||
-    !this.newUsuario.login ||
     !this.newUsuario.senha ||
     !this.newUsuario.telefone ||
     !this.newUsuario.email ||
@@ -66,8 +65,8 @@ export class UsuariosComponent implements OnInit {
     next: () => {
       this.successMessage = 'Usuário criado com sucesso!';
       this.newUsuario = {
+        tipo: 'cliente',
         nome: '',
-        login: '',
         senha: '',
         telefone: '',
         email: '',

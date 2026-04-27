@@ -1,0 +1,13 @@
+<div class="container">
+  <h2>Cadastro Lojista</h2>
+
+  <input placeholder="Nome do responsável" [(ngModel)]="novoUsuario.nome">
+  <input placeholder="Nome da loja" [(ngModel)]="novoUsuario.nomeLoja">
+  <input placeholder="CNPJ" [(ngModel)]="novoUsuario.cnpj">
+  <input placeholder="Email" [(ngModel)]="novoUsuario.email">
+  <input type="password" placeholder="Senha" [(ngModel)]="novoUsuario.senha">
+  <input placeholder="Telefone" [(ngModel)]="novoUsuario.telefone">
+  <input placeholder="Endereço da loja" [(ngModel)]="novoUsuario.endereco">
+
+  <button (click)="cadastrar()">Cadastrar lojista</button>
+</div>

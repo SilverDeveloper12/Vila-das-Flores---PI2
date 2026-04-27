@@ -1,0 +1,11 @@
+<div class="container">
+  <h2>Cadastro Cliente</h2>
+
+  <input placeholder="Nome" [(ngModel)]="novoUsuario.nome">
+  <input placeholder="Email" [(ngModel)]="novoUsuario.email">
+  <input type="password" placeholder="Senha" [(ngModel)]="novoUsuario.senha">
+  <input placeholder="Telefone" [(ngModel)]="novoUsuario.telefone">
+  <input placeholder="Endereço" [(ngModel)]="novoUsuario.endereco">
+
+  <button (click)="cadastrar()">Cadastrar</button>
+</div>

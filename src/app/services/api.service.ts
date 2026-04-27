@@ -11,17 +11,22 @@ constructor(private http: HttpClient) { }
 getUsuarios(): Observable<Usuario[]> {
 return this.http.get<Usuario[]>(`${this.apiUrl}/usuarios`);
 }
-getUsuario(id: number): Observable<Usuario> {
-return this.http.get<Usuario>(`${this.apiUrl}/usuarios/${id}`);
+getUsuario(id: string): Observable<Usuario> {
+  return this.http.get<Usuario>(`${this.apiUrl}/usuarios/${id}`);
+}
+login(email: string, senha: string): Observable<Usuario[]> {
+  return this.http.get<Usuario[]>(
+    `${this.apiUrl}/usuarios?email=${email}&senha=${senha}`
+  );
 }
 createUsuario(usuario: Usuario): Observable<Usuario> {
 return this.http.post<Usuario>(`${this.apiUrl}/usuarios`, usuario);
 }
-updateUsuario(id: number, usuario: Usuario): Observable<Usuario> {
-return this.http.put<Usuario>(`${this.apiUrl}/usuarios/${id}`, usuario);
+updateUsuario(id: string, usuario: Usuario): Observable<Usuario> {
+  return this.http.put<Usuario>(`${this.apiUrl}/usuarios/${id}`, usuario);
 }
-deleteUsuario(id: number): Observable<void> {
-return this.http.delete<void>(`${this.apiUrl}/usuarios/${id}`);
+deleteUsuario(id: string): Observable<void> {
+  return this.http.delete<void>(`${this.apiUrl}/usuarios/${id}`);
 }
 // Métodos para Produtos
 getProdutos(): Observable<Produto[]> {

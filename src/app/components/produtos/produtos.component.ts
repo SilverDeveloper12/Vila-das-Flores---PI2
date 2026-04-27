@@ -13,7 +13,7 @@ import { Produto } from '../../models/models';
 })
 export class ProdutosComponent implements OnInit {
   produtos: Produto[] = [];
-  
+  usuarioLogado: any;
   novoProduto: Produto = {
     nome: '',
     preco: 0,
@@ -26,26 +26,26 @@ export class ProdutosComponent implements OnInit {
   editando = false;
   produtoEditandoId: string | null = null;
 
-  constructor(private api: ApiService) {}
+  constructor(private apiService: ApiService) {}
 
-  ngOnInit(): void {
-    this.carregarProdutos();
-  }
+  ngOnInit() {
+  this.usuarioLogado = JSON.parse(localStorage.getItem('usuarioLogado') || '{}');
+  this.carregarProdutos();
+}
 
-  carregarProdutos(): void {
-    this.api.getProdutos().subscribe({
-      next: (dados) => {
-        this.produtos = dados;
-        console.log('Produtos carregados:', dados);
-      },
-      error: (erro) => {
-        console.error('Erro ao buscar produtos:', erro);
-      }
-    });
-  }
+  carregarProdutos() {
+  this.apiService.getProdutos().subscribe((produtos: Produto[]) => {
+    if (this.usuarioLogado.tipo === 'lojista') {
+      this.produtos = produtos.filter((p: Produto) => p.lojistaId === this.usuarioLogado.id);
+    } else {
+      this.produtos = produtos;
+    }
+  });
+}
 
   adicionarProduto(): void {
-    this.api.addProduto(this.novoProduto).subscribe({
+    this.novoProduto.lojistaId = this.usuarioLogado.id;
+    this.apiService.addProduto(this.novoProduto).subscribe({
       next: (produtoAdicionado) => {
         this.produtos.push(produtoAdicionado);
         console.log('Produto adicionado:', produtoAdicionado);
@@ -65,7 +65,7 @@ export class ProdutosComponent implements OnInit {
     });
   }
   removerProduto(id: string): void {
-  this.api.deleteProduto(id).subscribe({
+  this.apiService.deleteProduto(id).subscribe({
     next: () => {
       this.produtos = this.produtos.filter(produto => produto.id !== id);
       console.log('Produto removido com sucesso');
@@ -82,7 +82,7 @@ export class ProdutosComponent implements OnInit {
   }
   salvarProduto(): void {
   if (this.editando && this.produtoEditandoId) {
-    this.api.updateProduto(this.produtoEditandoId, this.novoProduto).subscribe({
+    this.apiService.updateProduto(this.produtoEditandoId, this.novoProduto).subscribe({
       next: (produtoAtualizado) => {
         this.produtos = this.produtos.map(produto =>
           produto.id === this.produtoEditandoId ? produtoAtualizado : produto
@@ -96,7 +96,7 @@ export class ProdutosComponent implements OnInit {
       }
     });
   } else {
-    this.api.addProduto(this.novoProduto).subscribe({
+    this.apiService.addProduto(this.novoProduto).subscribe({
       next: (produtoAdicionado) => {
         this.produtos.push(produtoAdicionado);
         console.log('Produto adicionado:', produtoAdicionado);

@@ -35,12 +35,14 @@
 <p class="info-produto"><strong>Preço:</strong> R$ {{ produto.preco }}</p>
 <p class="info-produto"><strong>Estoque:</strong> {{ produto.estoque }}</p>
 
-    <button class="btn btn-editar" (click)="editarProduto(produto)">
+<button class="btn btn-editar" (click)="editarProduto(produto)">
   Editar
+  *ngIf="usuarioLogado?.tipo === 'lojista' && produto.lojistaId === usuarioLogado?.id"
 </button>
 
 <button class="btn btn-excluir" (click)="removerProduto(produto.id!)">
   Excluir
+  *ngIf="usuarioLogado?.tipo === 'lojista' && produto.lojistaId === usuarioLogado?.id"
 </button>
     <hr />
   </div>

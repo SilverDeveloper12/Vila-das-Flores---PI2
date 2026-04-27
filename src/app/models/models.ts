@@ -1,15 +1,19 @@
 export interface Usuario {
   id?: string;
+  tipo: 'cliente' | 'lojista';
   nome: string;
-  login: string;
+  login?: string;
+  email: string;
   senha: string;
   telefone: string;
-  email: string;
   endereco: string;
+  nomeLoja?: string;
+  cnpj?: string;
 }
 
 export interface Produto {
   id?: string;
+  lojistaId?: string;
   nome: string;
   preco: number;
   estoque: number;
