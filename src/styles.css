@@ -1,5 +1,5 @@
 body {
-  font-family: 'Italiana', serif;
+  font-family: 'Inter', serif;
   background-color: white;
   margin: 0;
 }
@@ -19,8 +19,8 @@ img {
 .topo {
   display: flex;
   justify-content: center;
-  align-items: center;
-  position: relative;
+  align-items: top;
+  position:relative;
   padding: 20px;
   background: white;
   
@@ -31,7 +31,7 @@ img {
   background-color: #e5b7f1;
   padding: 10px 20px;
   border-radius: 20px;
-  font-family: 'Italiana', serif;
+  font-family: 'Inter', serif;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
   color:black;
 }
@@ -41,20 +41,20 @@ img {
   color: black;
   position: absolute;
   right: 40px;
-  font-family: 'Italiana', serif;
+  font-family: 'Inter', serif;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 /* MENU */
 nav {
   display: flex;
   justify-content: space-around;
-  background: #d8b4e2;
-  padding: 20px 10px 0;
+  background: #ab5cc1;
+  padding: 20px 20px 0;
   height: 70px;
 }
 
 nav a {
-  background: #eee;
+  background: #0a0000;
   padding: 10px 25px;
   border-radius: 20px 20px 0 0;
   width: 130px;
@@ -72,16 +72,17 @@ nav a {
 }
 
 .destaques img {
-  width: 200px;
+  width: 175px;
 }
 
 /* FAIXA PREÇO */
 .faixa-precos {
   display: flex;
   justify-content: space-around;
-  background: #d8b4e2;
+  background: #ab5cc1;
   padding: 20px;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  color: white;
 }
 
 /* PRODUTOS */
@@ -113,11 +114,11 @@ nav a {
 }
 
 button, nav a {
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   border: none;
   border-radius: 20px;
   padding: 10px 20px;
-  font-family: 'Italiana', serif;
+  font-family: 'Inter', serif;
   color: black;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 
@@ -126,7 +127,8 @@ button, nav a {
 /* INFO */
 .info {
   display: flex;
-  background: #d8b4e2;
+  background-color: white;
+;
   padding: 20px;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
