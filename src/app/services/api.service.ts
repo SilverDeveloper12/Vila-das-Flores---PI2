@@ -14,9 +14,9 @@ return this.http.get<Usuario[]>(`${this.apiUrl}/usuarios`);
 getUsuario(id: string): Observable<Usuario> {
   return this.http.get<Usuario>(`${this.apiUrl}/usuarios/${id}`);
 }
-login(email: string, senha: string): Observable<Usuario[]> {
+login(email: string): Observable<Usuario[]> {
   return this.http.get<Usuario[]>(
-    `${this.apiUrl}/usuarios?email=${email}&senha=${senha}`
+    `${this.apiUrl}/usuarios?email=${encodeURIComponent(email)}`
   );
 }
 createUsuario(usuario: Usuario): Observable<Usuario> {

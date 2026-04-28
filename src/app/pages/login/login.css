@@ -1,0 +1,17 @@
+.mensagem-erro {
+  color: #b00020;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.tremer {
+  animation: tremer 0.3s;
+}
+
+@keyframes tremer {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}

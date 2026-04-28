@@ -39,6 +39,37 @@
       "nomeLoja": "Jardim Aracati",
       "cnpj": "43.250.776/0001-31",
       "id": "Z8cqFmGt4sE"
+    },
+    {
+      "tipo": "lojista",
+      "nome": "Camily",
+      "email": "camily@email.com",
+      "senha": "flores123",
+      "telefone": "11940028922",
+      "endereco": "12345678888999",
+      "nomeLoja": "Vila das flores",
+      "cnpj": "",
+      "id": "UOelpzKYyRc"
+    },
+    {
+      "tipo": "cliente",
+      "nome": "Teste",
+      "email": "teste@gmail.com",
+      "senha": "teste123",
+      "telefone": "11999998888",
+      "endereco": "Rua Anor Londo, 32",
+      "id": "giuzrzUhuIw"
+    },
+    {
+      "tipo": "lojista",
+      "nome": "Gwyn",
+      "email": "gwyn@gmail.com",
+      "senha": "gwyn123",
+      "telefone": "11911111111",
+      "endereco": "Rua Minecraft, 90",
+      "nomeLoja": "Dark Souls",
+      "cnpj": "43.250.776/0001-31",
+      "id": "kYctYm9M3-s"
     }
   ],
   "produtos": [

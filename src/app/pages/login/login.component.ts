@@ -16,6 +16,16 @@ export class LoginComponent {
   email = '';
   senha = '';
   mensagemErro = '';
+  erroAnimado = false;
+  mostrarErroLogin() {
+  this.mensagemErro = 'Email ou senha incorretos.';
+
+  this.erroAnimado = false;
+
+  setTimeout(() => {
+    this.erroAnimado = true;
+  }, 10);
+}
 
   constructor(
     private apiService: ApiService,
@@ -23,27 +33,36 @@ export class LoginComponent {
   ) {}
 
   entrar() {
-    this.apiService.login(this.email, this.senha).subscribe({
-      next: (usuarios: Usuario[]) => {
-        if (usuarios.length > 0) {
-          const usuarioLogado = usuarios[0];
+  this.mensagemErro = '';
+  this.erroAnimado = false;
 
-          localStorage.setItem('usuarioLogado', JSON.stringify(usuarioLogado));
+  const emailDigitado = this.email.trim();
+  const senhaDigitada = this.senha.trim();
 
-          if (usuarioLogado.tipo === 'lojista') {
-            this.router.navigate(['/produtos']);
-          } else {
-            this.router.navigate(['/']);
-          }
-        } else {
-          this.mensagemErro = 'Email ou senha incorretos.';
-        }
-      },
-      error: () => {
-        this.mensagemErro = 'Erro ao tentar fazer login.';
-      }
-    });
+  this.apiService.login(emailDigitado).subscribe({
+    next: (usuarios: Usuario[]) => {
+  const usuarioEncontrado = usuarios.find(
+    usuario => usuario.senha === senhaDigitada
+  );
+
+  if (usuarioEncontrado) {
+    console.log('Usuário logado:', usuarioEncontrado);
+    localStorage.setItem('usuarioLogado', JSON.stringify(usuarioEncontrado));
+
+    if (usuarioEncontrado.tipo === 'lojista') {
+      this.router.navigate(['/produtos']);
+    } else {
+      this.router.navigate(['/']);
+    }
+  } else {
+    this.mostrarErroLogin();
   }
+},
+    error: () => {
+      this.mensagemErro = 'Erro ao tentar fazer login.';
+    }
+  });
+}
 
   irParaCadastroCliente() {
     this.router.navigate(['/cadastro-cliente']);

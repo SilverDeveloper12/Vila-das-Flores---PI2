@@ -19,5 +19,5 @@
 
   <button (click)="irParaCadastroLojista()">Cadastrar como lojista</button>
 
-  <p *ngIf="mensagemErro">{{ mensagemErro }}</p>
+  <p *ngIf="mensagemErro"class="mensagem-erro"[class.tremer]="erroAnimado">{{ mensagemErro }}</p>
 </div>
