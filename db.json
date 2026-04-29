@@ -70,6 +70,15 @@
       "nomeLoja": "Dark Souls",
       "cnpj": "43.250.776/0001-31",
       "id": "kYctYm9M3-s"
+    },
+    {
+      "tipo": "cliente",
+      "nome": "barbara linda @2000",
+      "email": "Tirulirobaby AHAM",
+      "senha": "KKK123",
+      "telefone": "11946735965",
+      "endereco": "Rua Giovanni da Milano 54",
+      "id": "n3iIwHH2DQo"
     }
   ],
   "produtos": [
