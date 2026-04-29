@@ -5,11 +5,10 @@
   </div>
 
   <nav>
-   <a routerLink="/">Início</a>
-   <a routerLink="/produtos">Loja</a>
+    <a routerLink="/">Início</a>
+    <a routerLink="/loja">Loja</a>
+    <a *ngIf="isLojista()" routerLink="/produtos">Gerenciar Produtos</a>
     <a routerLink="/contatos">Contatos</a>
-    <a href="#">Carrinho</a>
   </nav>
 </header>
-<router-outlet></router-outlet>
-
+<router-outlet></router-outlet> 

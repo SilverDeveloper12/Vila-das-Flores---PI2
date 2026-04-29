@@ -1,0 +1,23 @@
+<section class="loja">
+  <h2>Loja</h2>
+
+  <p *ngIf="carregando">Carregando produtos...</p>
+
+  <div class="lista-produtos" *ngIf="!carregando && produtos.length > 0">
+    <div class="card-produto" *ngFor="let produto of produtos">
+      <img [src]="produto.imagem" [alt]="produto.nome">
+
+      <h3>{{ produto.nome }}</h3>
+      <p>{{ produto.descricao }}</p>
+      <p>Categoria: {{ produto.categoria }}</p>
+      <p>Preço: R$ {{ produto.preco }}</p>
+      <p>Estoque: {{ produto.estoque }}</p>
+
+      <button (click)="comprar(produto)">Comprar</button>
+    </div>
+  </div>
+
+  <p *ngIf="!carregando && produtos.length === 0">
+    Nenhum produto encontrado.
+  </p>
+</section>
