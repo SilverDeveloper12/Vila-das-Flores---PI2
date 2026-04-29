@@ -2,9 +2,31 @@
   <h2>Cadastro Cliente</h2>
 
   <input placeholder="Nome" [(ngModel)]="novoUsuario.nome">
-  <input placeholder="Email" [(ngModel)]="novoUsuario.email">
-  <input type="password" placeholder="Senha" [(ngModel)]="novoUsuario.senha">
-  <input placeholder="Telefone" [(ngModel)]="novoUsuario.telefone">
+
+  <input
+  type="email"
+  placeholder="Email"
+  [(ngModel)]="novoUsuario.email"
+  required
+  >
+
+  <input
+  type="password"
+  placeholder="Senha"
+  [(ngModel)]="novoUsuario.senha"
+  >
+  <input
+  type="password"
+  placeholder="Confirmar Senha"
+  [(ngModel)]="confirmarSenha"
+>
+
+  <input
+    placeholder="Telefone"
+    [(ngModel)]="novoUsuario.telefone"
+    maxlength="11"
+  >
+
   <input placeholder="Endereço" [(ngModel)]="novoUsuario.endereco">
 
   <button (click)="cadastrar()">Cadastrar</button>

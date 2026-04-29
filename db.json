@@ -79,6 +79,24 @@
       "telefone": "11946735965",
       "endereco": "Rua Giovanni da Milano 54",
       "id": "n3iIwHH2DQo"
+    },
+    {
+      "tipo": "cliente",
+      "nome": "dadadad",
+      "email": "dadadad@dadad",
+      "senha": "dadad",
+      "telefone": "11111111111",
+      "endereco": "daddddddddddddddddd ad",
+      "id": "vJqs0dOQVQo"
+    },
+    {
+      "tipo": "cliente",
+      "nome": "dadadad",
+      "email": "dadadad@Gamsdjs.com",
+      "senha": "GGG12345",
+      "telefone": "11111111111",
+      "endereco": "daddddddddddddddddd ad",
+      "id": "fWt0gsN4pQQ"
     }
   ],
   "produtos": [
