@@ -79,6 +79,7 @@ export class ProdutosComponent implements OnInit {
     this.novoProduto = { ...produto };
     this.editando = true;
     this.produtoEditandoId = produto.id!;
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
   salvarProduto(): void {
   if (this.editando && this.produtoEditandoId) {
