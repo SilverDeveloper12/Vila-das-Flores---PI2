@@ -1,9 +1,35 @@
 <header>
   <div class="topo">
     <div class="logo">Vila das Flores</div>
-    <button class="login" routerLink="/login">LOGIN</button>
+    <div class="area-usuario">
+
+  <button *ngIf="!usuarioLogado"
+          class="login"
+          routerLink="/login">
+    LOGIN
+  </button>
+
+  <div *ngIf="usuarioLogado" class="usuario-logado">
+
+    <div class="perfil-logado">
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/847/847969.png"
+        alt="Perfil"
+        class="foto-perfil"
+      >
+
+      <span>{{ usuarioLogado.nome }}</span>
+    </div>
+
+    <button class="btn-logout" (click)="logout()">
+      Logout
+    </button>
+
   </div>
 
+</div>
+  </div>
+    
   <nav>
     <a routerLink="/">Início</a>
     <a routerLink="/loja">Loja</a>

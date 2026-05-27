@@ -21,6 +21,12 @@ export class AppComponent {
       });
   }
 
+  logout() {
+  localStorage.removeItem('usuarioLogado');
+
+  this.usuarioLogado = null;
+}
+
   ngOnInit() {
     this.carregarUsuarioLogado();
   }
