@@ -2,12 +2,14 @@
   "usuarios": [
     {
       "id": "1",
-      "tipo": "cliente",
-      "nome": "Ana",
-      "email": "ana@email.com",
-      "senha": "ana123",
+      "tipo": "lojista",
+      "nome": "Vila das Flores",
+      "email": "viladasflores@email.com",
+      "senha": "vila123",
       "telefone": "11999999999",
-      "endereco": "Rua A"
+      "endereco": "Rua Vila das Flores",
+      "nomeLoja": "Vila das Flores",
+      "cnpj": "4516798453789045"
     },
     {
       "id": "2",
