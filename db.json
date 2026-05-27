@@ -83,6 +83,24 @@
       "id": "n3iIwHH2DQo"
     },
     {
+      "tipo": "cliente",
+      "nome": "dadadad",
+      "email": "dadadad@dadad",
+      "senha": "dadad",
+      "telefone": "11111111111",
+      "endereco": "daddddddddddddddddd ad",
+      "id": "vJqs0dOQVQo"
+    },
+    {
+      "tipo": "cliente",
+      "nome": "dadadad",
+      "email": "dadadad@Gamsdjs.com",
+      "senha": "GGG12345",
+      "telefone": "11111111111",
+      "endereco": "daddddddddddddddddd ad",
+      "id": "fWt0gsN4pQQ"
+    },
+    {
       "tipo": "lojista",
       "nome": "Leandro",
       "email": "emaildoleandro@email.com",
@@ -117,7 +135,7 @@
     },
     {
       "id": "3",
-      "lojistaId": "1",
+      "lojistaId": "Z8cqFmGt4sE",
       "nome": "Buquê de Girassóis",
       "preco": 95,
       "estoque": 10,
@@ -135,9 +153,10 @@
       "imagem": "https://png.pngtree.com/png-clipart/20250129/original/pngtree-graceful-lily-bouquet-with-pink-and-white-blooms-png-image_20083758.png",
       "descricao": "Lírios sofisticados com aroma suave."
     },
+
     {
       "id": "5",
-      "lojistaId": "1",
+      "lojistaId": "Z8cqFmGt4sE",
       "nome": "Buquê de Tulipas Coloridas",
       "preco": 130,
       "estoque": 9,
@@ -157,7 +176,7 @@
     },
     {
       "id": "7",
-      "lojistaId": "1",
+      "lojistaId": "23WNntMFvxo",
       "nome": "Arranjo de Margaridas",
       "preco": 70,
       "estoque": 20,
@@ -177,7 +196,7 @@
     },
     {
       "id": "9",
-      "lojistaId": "1",
+      "lojistaId": "2",
       "nome": "Arranjo de Cravos",
       "preco": 75,
       "estoque": 18,
@@ -187,7 +206,7 @@
     },
     {
       "id": "10",
-      "lojistaId": "1",
+      "lojistaId": "2",
       "nome": "Arranjo de Hortênsias",
       "preco": 95,
       "estoque": 11,
@@ -207,7 +226,7 @@
     },
     {
       "id": "12",
-      "lojistaId": "1",
+      "lojistaId": "2",
       "nome": "Tulipa Unitária",
       "preco": 18,
       "estoque": 40,
@@ -227,7 +246,7 @@
     },
     {
       "id": "14",
-      "lojistaId": "1",
+      "lojistaId": "Z8cqFmGt4sE",
       "nome": "Lírio Unitário",
       "preco": 22,
       "estoque": 30,
@@ -257,7 +276,7 @@
     },
     {
       "id": "17",
-      "lojistaId": "1",
+      "lojistaId": "Z8cqFmGt4sE",
       "nome": "Arranjo Romântico",
       "preco": 140,
       "estoque": 7,
@@ -284,6 +303,66 @@
       "categoria": "Buquês",
       "imagem": "https://images.tcdn.com.br/img/img_prod/1368629/buque_de_camelia_81_1_4d49c6e3c2bdcfcc91dddbada49e2d29.jpg",
       "descricao": "Camélias delicadas e sofisticadas."
+    },
+    {   
+      "id" : "20",
+      "lojistaId": "1",
+      "nome": "Buquê de Rosas",
+      "preco": 128,
+      "estoque": 12,
+      "categoria": "Buquês",
+      "imagem": "https://www.uniflores.com.br/media/catalog/product/cache/1/image/1800x/040ec09b1e35df139433887a97daa66f/b/u/buque-charme-em-rosas2.jpg",
+      "descricao": "Lindo buque de rosas decoradas"
+    },
+    {   
+      "id" : "21",
+      "lojistaId": "1",
+      "nome": "Lavanda Unitaria",
+      "preco": 20,
+      "estoque": 25,
+      "categoria": "Flores",
+      "imagem": "https://static.vecteezy.com/system/resources/previews/044/812/136/non_2x/fragrant-lavender-flowers-on-transparent-background-png.png",
+      "descricao": "Lavanda unitaria para estilo de vida low-cost"
+    },
+    {   
+      "id" : "22",
+      "lojistaId": "1",
+      "nome": "Arranjo de Girassois",
+      "preco": 120,
+      "estoque": 15,
+      "categoria": "Arranjos",
+      "imagem": "https://tse2.mm.bing.net/th/id/OIP.h_9bUmmPsTryWNCjmK5yBwHaJ4?rs=1&pid=ImgDetMain&o=7&rm=3",
+      "descricao": "Arranjo de girassóis para ocasiões especiais"
+    },
+    {   
+      "id" : "23",
+      "lojistaId": "1",
+      "nome": "Buquê de Hortênsias",
+      "preco": 140,
+      "estoque": 12,
+      "categoria": "Buquês",
+      "imagem": "https://tse2.mm.bing.net/th/id/OIP.fogGP4mjEHm_-DZxzirTMwAAAA?rs=1&pid=ImgDetMain&o=7&rm=3",
+      "descricao": "Buquê de Hortênsias para um presente mais sofisticado"
+    },
+    {   
+      "id" : "24",
+      "lojistaId": "1",
+      "nome": "Buquê de Frésias",
+      "preco": 220,
+      "estoque": 12,
+      "categoria": "Buquês",
+      "imagem": "https://static.giulianaflores.com.br/images/product/24896gg.jpg?ims=405x405",
+      "descricao": "Lindo buquê de Frésias, flor tipica da africa do sul"
+    },
+    {   
+      "id" : "25",
+      "lojistaId": "2",
+      "nome": "Buquê de Margaridas",
+      "preco": 150,
+      "estoque": 25,
+      "categoria": "Buquês",
+      "imagem": "https://homeflora.pt/wp-content/uploads/buque-margaridas-brancas.jpg",
+      "descricao": "Sofisticado e simples"
     }
   ],
   "carrinho": [
