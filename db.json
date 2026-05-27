@@ -99,6 +99,17 @@
       "telefone": "11111111111",
       "endereco": "daddddddddddddddddd ad",
       "id": "fWt0gsN4pQQ"
+    },
+    {
+      "tipo": "lojista",
+      "nome": "Leandro",
+      "email": "emaildoleandro@email.com",
+      "senha": "leandro123",
+      "telefone": "11999777882",
+      "endereco": "Rua Leandro",
+      "nomeLoja": "Flores do Leandro",
+      "cnpj": "12312542152155",
+      "id": "23WNntMFvxo"
     }
   ],
   "produtos": [
