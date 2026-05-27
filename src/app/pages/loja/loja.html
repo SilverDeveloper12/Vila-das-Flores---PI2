@@ -1,23 +1,38 @@
 <section class="loja">
   <h2>Loja</h2>
 
+  <input
+    type="text"
+    placeholder="Pesquisar produtos..."
+    [(ngModel)]="pesquisa"
+    (input)="filtrarProdutos()"
+    class="barra-pesquisa"
+  >
+
   <p *ngIf="carregando">Carregando produtos...</p>
 
-  <div class="lista-produtos" *ngIf="!carregando && produtos.length > 0">
-    <div class="card-produto" *ngFor="let produto of produtos">
+  <div class="lista-produtos" *ngIf="!carregando && produtosFiltrados.length > 0">
+    <div class="card-produto" *ngFor="let produto of produtosFiltrados">
       <img [src]="produto.imagem" [alt]="produto.nome">
 
       <h3>{{ produto.nome }}</h3>
+
+      <p><strong>Vendido por:</strong>
+        {{ getNomeLojista(produto.lojistaId) }}
+      </p>
+
       <p>{{ produto.descricao }}</p>
       <p>Categoria: {{ produto.categoria }}</p>
       <p>Preço: R$ {{ produto.preco }}</p>
       <p>Estoque: {{ produto.estoque }}</p>
 
-      <button (click)="comprar(produto)">Comprar</button>
+      <button (click)="comprar(produto)">
+        Comprar
+      </button>
     </div>
   </div>
 
-  <p *ngIf="!carregando && produtos.length === 0">
+  <p *ngIf="!carregando && produtosFiltrados.length === 0">
     Nenhum produto encontrado.
   </p>
 </section>

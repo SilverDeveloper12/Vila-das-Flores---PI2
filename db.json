@@ -104,7 +104,7 @@
   "produtos": [
     {
       "id": "1",
-      "lojistaId": "2",
+      "lojistaId": "1",
       "nome": "Buquê de Rosas Vermelhas",
       "preco": 199.9,
       "estoque": 15,
@@ -114,6 +114,7 @@
     },
     {
       "id": "2",
+      "lojistaId": "1",
       "nome": "Buquê de Rosas Brancas",
       "preco": 100,
       "estoque": 12,
@@ -123,6 +124,7 @@
     },
     {
       "id": "3",
+      "lojistaId": "1",
       "nome": "Buquê de Girassóis",
       "preco": 95,
       "estoque": 10,
@@ -132,6 +134,7 @@
     },
     {
       "id": "4",
+      "lojistaId": "1",
       "nome": "Buquê de Lírios",
       "preco": 110,
       "estoque": 8,
@@ -141,6 +144,7 @@
     },
     {
       "id": "5",
+      "lojistaId": "1",
       "nome": "Buquê de Tulipas Coloridas",
       "preco": 130,
       "estoque": 9,
@@ -150,6 +154,7 @@
     },
     {
       "id": "6",
+      "lojistaId": "1",
       "nome": "Buquê de Orquídeas",
       "preco": 150,
       "estoque": 6,
@@ -159,6 +164,7 @@
     },
     {
       "id": "7",
+      "lojistaId": "1",
       "nome": "Arranjo de Margaridas",
       "preco": 70,
       "estoque": 20,
@@ -168,6 +174,7 @@
     },
     {
       "id": "8",
+      "lojistaId": "1",
       "nome": "Arranjo de Lavandas",
       "preco": 85,
       "estoque": 14,
@@ -177,6 +184,7 @@
     },
     {
       "id": "9",
+      "lojistaId": "1",
       "nome": "Arranjo de Cravos",
       "preco": 75,
       "estoque": 18,
@@ -186,6 +194,7 @@
     },
     {
       "id": "10",
+      "lojistaId": "1",
       "nome": "Arranjo de Hortênsias",
       "preco": 95,
       "estoque": 11,
@@ -195,6 +204,7 @@
     },
     {
       "id": "11",
+      "lojistaId": "1",
       "nome": "Rosa Vermelha Unitária",
       "preco": 15,
       "estoque": 50,
@@ -204,6 +214,7 @@
     },
     {
       "id": "12",
+      "lojistaId": "1",
       "nome": "Tulipa Unitária",
       "preco": 18,
       "estoque": 40,
@@ -213,6 +224,7 @@
     },
     {
       "id": "13",
+      "lojistaId": "1",
       "nome": "Girassol Unitário",
       "preco": 20,
       "estoque": 35,
@@ -222,6 +234,7 @@
     },
     {
       "id": "14",
+      "lojistaId": "1",
       "nome": "Lírio Unitário",
       "preco": 22,
       "estoque": 30,
@@ -231,6 +244,7 @@
     },
     {
       "id": "15",
+      "lojistaId": "1",
       "nome": "Orquídea Unitária",
       "preco": 35,
       "estoque": 20,
@@ -240,6 +254,7 @@
     },
     {
       "id": "16",
+      "lojistaId": "1",
       "nome": "Buquê Premium Mix",
       "preco": 180,
       "estoque": 5,
@@ -249,6 +264,7 @@
     },
     {
       "id": "17",
+      "lojistaId": "1",
       "nome": "Arranjo Romântico",
       "preco": 140,
       "estoque": 7,
@@ -258,6 +274,7 @@
     },
     {
       "id": "18",
+      "lojistaId": "1",
       "nome": "Buquê de Peônias com Flor do Campo",
       "preco": 160,
       "estoque": 6,
@@ -267,6 +284,7 @@
     },
     {
       "id": "19",
+      "lojistaId": "1",
       "nome": "Buquê de Camélias",
       "preco": 125,
       "estoque": 8,

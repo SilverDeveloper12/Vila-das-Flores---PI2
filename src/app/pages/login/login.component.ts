@@ -71,4 +71,26 @@ export class LoginComponent {
   irParaCadastroLojista() {
     this.router.navigate(['/cadastro-lojista']);
   }
+  esqueciSenha() {
+  const email = prompt('Digite seu e-mail:');
+
+  if (!email) {
+    return;
+  }
+
+  this.apiService.login(email).subscribe({
+    next: (usuarios: Usuario[]) => {
+      const usuario = usuarios[0];
+
+      if (usuario) {
+        alert(`Sua senha é: ${usuario.senha}`);
+      } else {
+        alert('E-mail não encontrado.');
+      }
+    },
+    error: () => {
+      alert('Erro ao buscar usuário.');
+    }
+  });
+}
 }
