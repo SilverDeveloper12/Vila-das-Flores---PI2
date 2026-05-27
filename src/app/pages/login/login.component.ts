@@ -48,12 +48,7 @@ export class LoginComponent {
   if (usuarioEncontrado) {
     console.log('Usuário logado:', usuarioEncontrado);
     localStorage.setItem('usuarioLogado', JSON.stringify(usuarioEncontrado));
-
-    if (usuarioEncontrado.tipo === 'lojista') {
-      this.router.navigate(['/produtos']);
-    } else {
-      this.router.navigate(['/']);
-    }
+    this.router.navigate(['/']);
   } else {
     this.mostrarErroLogin();
   }

@@ -1,51 +1,245 @@
-p {
-  color: blue;
-  font-size: 20px;
-}
-.btn {
-  font-family: 'Montserrat', sans-serif;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 6px;
-  cursor: pointer;
-}
-.btn-principal {
-  background-color: #dfdfdf;
-  color: rgb(0, 0, 0);
+/* WRAPPER GERAL */
+.gerenciar-wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px 16px;
+  font-family: 'Inter', sans-serif;
 }
 
-.btn-principal:hover {
-  background-color: #c2185b;
+.section-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #4a148c;
+  margin-bottom: 16px;
+  border-left: 4px solid rgb(162, 87, 197);
+  padding-left: 10px;
+}
+
+/* FORMULÁRIO */
+.form-section {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 36px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+}
+
+.produto-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-row {
+  display: flex;
+  gap: 16px;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #555;
+  margin: 0;
+}
+
+.form-group input {
+  width: 100%;
+  height: 40px;
+  padding: 0 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fafafa;
+  font-size: 14px;
+  color: #333;
+  box-sizing: border-box;
+  transition: border 0.2s;
+  margin: 0;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: rgb(162, 87, 197);
+  background: #fff;
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.btn-salvar {
+  background-color: rgb(162, 87, 197);
+  color: white;
+  border: none;
+  padding: 11px 28px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-salvar:hover {
+  background-color: #7b1fa2;
+  transform: scale(1.02);
+}
+
+.btn-cancelar {
+  background-color: #f5f5f5;
+  color: #555;
+  border: 1px solid #ccc;
+  padding: 11px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-cancelar:hover {
+  background-color: #e0e0e0;
+}
+
+/* LISTA DE PRODUTOS */
+.lista-section {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+}
+
+.produtos-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.produto-card {
+  display: flex;
+  gap: 16px;
+  background: #fafafa;
+  border: 1px solid #ececec;
+  border-radius: 10px;
+  padding: 14px;
+  align-items: flex-start;
+  transition: box-shadow 0.2s;
+}
+
+.produto-card:hover {
+  box-shadow: 0 4px 12px rgba(162, 87, 197, 0.15);
+}
+
+.produto-img {
+  width: 90px !important;
+  height: 90px !important;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+  border: 1px solid #e0e0e0;
+}
+
+.produto-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.produto-nome {
+  font-size: 15px;
+  font-weight: 700;
+  color: #222;
+  margin: 0;
+}
+
+.produto-categoria {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  background: #ede7f6;
+  color: #6a1b9a;
+  padding: 2px 10px;
+  border-radius: 20px;
+  width: fit-content;
+}
+
+.produto-descricao {
+  font-size: 13px;
+  color: #666;
+  margin: 4px 0 0;
+}
+
+.produto-detalhes {
+  display: flex;
+  gap: 16px;
+  margin-top: 6px;
+  align-items: center;
+}
+
+.preco {
+  font-size: 15px;
+  font-weight: 700;
+  color: #4a148c;
+}
+
+.estoque {
+  font-size: 12px;
+  color: #777;
+  background: #f0f0f0;
+  padding: 2px 10px;
+  border-radius: 12px;
+}
+
+.produto-acoes {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.btn {
+  border: none;
+  padding: 7px 18px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
 }
 
 .btn-editar {
-  background-color: #dfdfdf;
-  color: black;
+  background-color: #ede7f6;
+  color: #6a1b9a;
+}
+
+.btn-editar:hover {
+  background-color: #d1c4e9;
 }
 
 .btn-excluir {
-  background-color: #dc3545;
-  color: white;
-}
-.btn-principal {
-  background-color: #e91e63;
-  color: white;
-  font-family: 'Montserrat', sans-serif;
-
-  border: none;
-  padding: 10px 20px;
-  border-radius: 8px;
-
-  cursor: pointer;
-  transition: 0.3s;
+  background-color: #ffebee;
+  color: #c62828;
 }
 
-.btn-principal:hover {
-  background-color: #c2185b;
+.btn-excluir:hover {
+  background-color: #ffcdd2;
 }
-.info-produto {
-  font-family: 'Montserrat', sans-serif;
-  color: #000;
-  margin: 4px 0;
+
+.sem-produtos {
+  text-align: center;
+  color: #999;
   font-size: 14px;
+  padding: 32px 0;
 }
